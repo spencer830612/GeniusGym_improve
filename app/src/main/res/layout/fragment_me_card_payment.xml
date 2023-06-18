@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".member.controller.MeCardPayment" >
+
+    <TextView
+        android:id="@+id/tvShopName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="@string/tvShopName"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvGymName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <TextView
+        android:id="@+id/tvGymName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:text="@string/tvGymName"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvShopName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="350sp"
+        android:layout_height="1dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="@+id/tvGymName"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/tvShopName"
+        app:layout_constraintTop_toBottomOf="@+id/tvGymName" />
+
+    <TextView
+        android:id="@+id/tvTradePoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvTradePoints"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvShopName"
+        app:layout_constraintStart_toStartOf="@+id/tvShopName"
+        tools:layout_editor_absoluteY="131dp" />
+
+    <TextView
+        android:id="@+id/rsTradePoints"
+        android:layout_width="213dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="10dp"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvGymName"
+        app:layout_constraintStart_toStartOf="@+id/tvGymName"
+        app:layout_constraintTop_toBottomOf="@+id/line1"
+        tools:text="顯示交易金額" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="350sp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rsTradePoints" />
+
+    <TextView
+        android:id="@+id/tvTradeDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvTradeDay"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTradePoints"
+        app:layout_constraintStart_toStartOf="@+id/tvTradePoints"
+        tools:layout_editor_absoluteY="183dp" />
+
+    <TextView
+        android:id="@+id/rsTradeDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/rsTradePoints"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rsTradePoints"
+        app:layout_constraintTop_toBottomOf="@+id/line2"
+        tools:text="顯示交易年月日" />
+
+    <View
+        android:id="@+id/line4"
+        android:layout_width="350sp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rsTradeDay" />
+
+    <TextView
+        android:id="@+id/tvCardNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvCardNum"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTradeDay"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvTradeDay"
+        tools:layout_editor_absoluteY="235dp" />
+
+    <TextView
+        android:id="@+id/rsCardNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/rsTradeDay"
+        app:layout_constraintStart_toStartOf="@+id/rsTradeDay"
+        app:layout_constraintTop_toBottomOf="@+id/line4"
+        tools:text="顯示卡號數字串" />
+
+    <View
+        android:id="@+id/line5"
+        android:layout_width="350sp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rsCardNumber" />
+
+    <TextView
+        android:id="@+id/tvPasswordCon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/tvPasswordCon"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvCardNum"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvCardNum"
+        app:layout_constraintTop_toBottomOf="@+id/line5" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPasswordCon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPhoneCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F1EEEE"
+            android:hint="@string/etPhoneCode" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btPaymentConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/btPaymentConfirm"
+        android:textColor="#050505"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+        tools:layout_editor_absoluteX="152dp" />
+
+    <TextView
+        android:id="@+id/rePhoneCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/rePhoneCode"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

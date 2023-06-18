@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_co_member_detail"
+    app:startDestination="@id/coCalenderMemberStaticFragment">
+
+    <fragment
+        android:id="@+id/coCalenderMemberStaticFragment"
+        android:name="com.example.geniusgym.coach.calendarMemberListDetail.controller.CoCalenderMemberStaticFragment"
+        android:label="fragment_co_calender_member_detail"
+        tools:layout="@layout/fragment_co_calender_member_static" >
+        <action
+            android:id="@+id/action_coCalenderMemberStaticFragment_to_coCalenderMemberStaticSmallFragment"
+            app:destination="@id/coCalenderMemberStaticSmallFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coCalenderMemberRecordFragment"
+        android:name="com.example.geniusgym.coach.calendarMemberListDetail.controller.CoCalenderMemberRecordFragment"
+        android:label="fragment_co_calender_member_record"
+        tools:layout="@layout/fragment_co_calender_member_record" >
+        <action
+            android:id="@+id/action_coCalenderMemberRecordFragment_to_coCalenderMemberRecordAfterFragment"
+            app:destination="@id/coCalenderMemberRecordAfterFragment" />
+        <action
+            android:id="@+id/action_coCalenderMemberRecordFragment_to_coCalenderMemberRecordAnoxSmallFragment"
+            app:destination="@id/coCalenderMemberRecordAnoxSmallFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/coCalenderMemberStaticSmallFragment"
+        android:name="com.example.geniusgym.coach.calendarMemberListDetail.controller.CoCalenderMemberStaticSmallFragment"
+        android:label="fragment_co_calender_member_static_small"
+        tools:layout="@layout/fragment_co_calender_member_static_small" />
+    <fragment
+        android:id="@+id/coCalenderMemberRecordOxFragment"
+        android:name="com.example.geniusgym.coach.calendarMemberListDetail.controller.CoCalenderMemberRecordOxFragment"
+        android:label="fragment_co_calender_member_record_ox"
+        tools:layout="@layout/fragment_co_calender_member_record_ox" >
+        <action
+            android:id="@+id/action_coCalenderMemberRecordOxFragment_to_coCalenderMemberRecordOxSmallFragment"
+            app:destination="@id/coCalenderMemberRecordAfterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coCalenderMemberRecordAnoxFragment"
+        android:name="com.example.geniusgym.coach.calendarMemberListDetail.controller.CoCalenderMemberRecordAnoxFragment"
+        android:label="fragment_co_calender_member_record_anox"
+        tools:layout="@layout/fragment_co_calender_member_record_anox" >
+        <action
+            android:id="@+id/action_coCalenderMemberRecordAnoxFragment_to_coCalenderMemberRecordAnoxSmallFragment"
+            app:destination="@id/coCalenderMemberRecordAnoxSmallFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coCalenderMemberRecordAllFragment"
+        android:name="com.example.geniusgym.coach.calendarMemberListDetail.CoCalenderMemberRecordAllFragment"
+        android:label="fragment_co_calender_member_record_all"
+        tools:layout="@layout/fragment_co_calender_member_record_all" >
+        <action
+            android:id="@+id/action_coCalenderMemberRecordAllFragment_to_coCalenderMemberRecordOxSmallFragment"
+            app:destination="@id/coCalenderMemberRecordAfterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coCalenderMemberRecordAnoxSmallFragment"
+        android:name="com.example.geniusgym.coach.calendarMemberListDetail.controller.CoCalenderMemberRecordAnoxSmallFragment"
+        android:label="fragment_co_calender_member_record_anox_small"
+        tools:layout="@layout/fragment_co_calender_member_record_anox_small" >
+        <action
+            android:id="@+id/action_coCalenderMemberRecordAnoxSmallFragment_to_coCalenderMemberRecordOxSmallFragment"
+            app:destination="@id/coCalenderMemberRecordAfterFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/coCalenderMemberRecordAfterFragment"
+        android:name="com.example.geniusgym.coach.calendarMemberListDetail.controller.CoCalenderMemberRecordAfterFragment"
+        android:label="coCalenderMemberRecordAfterFragment" />
+</navigation>

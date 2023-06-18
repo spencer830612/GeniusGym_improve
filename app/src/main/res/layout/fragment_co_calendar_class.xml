@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.geniusgym.coach.calendarMemberList.viewmodel.CoCalendarClassViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@{viewModel.textDate}"
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llCoCaMeStExerciseDayOfWeekt"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#1C1B1F"
+            android:backgroundTint="#1C1B1F"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDate">
+
+            <TextView
+                android:id="@+id/tvCoCaDayOf1t"
+                style="@style/CoCaDayofWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tvCoCaDayOf1" />
+
+            <TextView
+                android:id="@+id/tvCoCaDayOf2t"
+                style="@style/CoCaDayofWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:text="@string/tvCoCaDayOf2" />
+
+            <TextView
+                android:id="@+id/tvCoCaDayOf3t"
+                style="@style/CoCaDayofWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:text="@string/tvCoCaDayOf3" />
+
+            <TextView
+                android:id="@+id/tvCoCaDayOf4t"
+                style="@style/CoCaDayofWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:text="@string/tvCoCaDayOf4" />
+
+            <TextView
+                android:id="@+id/tvCoCaDayOf5t"
+                style="@style/CoCaDayofWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:text="@string/tvCoCaDayOf5" />
+
+            <TextView
+                android:id="@+id/tvCoCaDayOf6t"
+                style="@style/CoCaDayofWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:text="@string/tvCoCaDayOf6" />
+
+            <TextView
+                android:id="@+id/tvCoCaDayOf7t"
+                style="@style/CoCaDayofWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:text="@string/tvCoCaDayOf7" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvClassListt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llCoCaMeStExerciseDayOfWeekt" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

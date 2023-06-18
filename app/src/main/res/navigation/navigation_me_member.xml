@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_me_member"
+    app:startDestination="@id/meMemberDetailFragment">
+
+    <fragment
+        android:id="@+id/mePointsFragment"
+        android:name="com.example.geniusgym.member.controller.MePointsFragment"
+        android:label="fragment_me_points"
+        tools:layout="@layout/fragment_me_points" >
+        <action
+            android:id="@+id/action_mePointsFragment_to_meBuyPointsFragment2"
+            app:destination="@id/meBuyPointsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/meCreditCard"
+        android:name="com.example.geniusgym.member.controller.MeCreditCard"
+        android:label="fragment_me_credit_card"
+        tools:layout="@layout/activity_me_credit_card" >
+        <action
+            android:id="@+id/action_meCreditCard_to_meCardApply"
+            app:destination="@id/meCardApply" />
+    </fragment>
+    <fragment
+        android:id="@+id/meCardPayment"
+        android:name="com.example.geniusgym.member.controller.MeCardPayment"
+        android:label="fragment_me_card_payment"
+        tools:layout="@layout/fragment_me_card_payment" >
+        <action
+            android:id="@+id/action_meCardPayment_to_meTradeCheck"
+            app:destination="@id/meTradeCheck" />
+    </fragment>
+    <fragment
+        android:id="@+id/meCardApply"
+        android:name="com.example.geniusgym.member.controller.MeCardApply"
+        android:label="fragment_me_card_apply"
+        tools:layout="@layout/fragment_me_card_apply" />
+    <fragment
+        android:id="@+id/meTradeCheck"
+        android:name="com.example.geniusgym.member.controller.MeTradeCheck"
+        android:label="fragment_me_trade_check"
+        tools:layout="@layout/fragment_me_trade_check" />
+    <fragment
+        android:id="@+id/mePersonalTrain"
+        android:name="com.example.geniusgym.member.controller.MePersonalTrain"
+        android:label="fragment_me_personal_train"
+        tools:layout="@layout/fragment_me_personal_train" />
+    <fragment
+        android:id="@+id/meMemberDetailFragment"
+        android:name="com.example.geniusgym.member.controller.MeMemberDetailFragment"
+        android:label="MeMemberDetailFragment" >
+        <action
+            android:id="@+id/action_meMemberDetailFragment_to_mePersonalTrain"
+            app:destination="@id/mePersonalTrain" />
+        <action
+            android:id="@+id/action_meMemberDetailFragment_to_mePointsFragment"
+            app:destination="@id/mePointsFragment" />
+        <action
+            android:id="@+id/action_meMemberDetailFragment_to_meBodyFragment"
+            app:destination="@id/meBodyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/meBodyFragment"
+        android:name="com.example.geniusgym.member.controller.MeBodyFragment"
+        android:label="MeBodyFragment" />
+    <fragment
+        android:id="@+id/meBuyPointsFragment2"
+        android:name="com.example.geniusgym.member.controller.MeBuyPointsFragment"
+        android:label="fragment_me_buy_points"
+        tools:layout="@layout/recycle_me_buy_points" />
+</navigation>

@@ -1,0 +1,181 @@
+<resources>
+    <string name="app_name">geniusgym</string>
+    <string name="home">首頁</string>
+    <string name="branch">分店</string>
+    <string name="social">社群</string>
+    <string name="notification">通知</string>
+    <string name="setting">設定</string>
+    <string name="member">會員</string>
+    <string name="information">個人</string>
+    <string name="title_activity_main_me">MainMeActivity</string>
+
+
+    <string name="bt_LessonStore">課程商店</string>
+    <string name="bt_MapDirect">地圖導覽</string>
+    <string name="bt_coachInfo">教練資訊</string>
+    <string name="opentime">開店時間</string>
+    <string name="closetime">關店時間</string>
+    <string name="experience">經歷</string>
+    <string name="optional_courses">: 可選課程列表</string>
+
+    <string name="tv_Login_Title">快樂運動，快樂瘦身</string>
+    <string name="tv_Login_Remind">還沒有帳號者，請儘速至櫃臺聯繫</string>
+    <string name="bt_Login_Confirm">確認</string>
+    <string name="ht_Login_Account">請輸入帳號</string>
+    <string name="ht_Login_Password">請輸入密碼</string>
+    <string name="tv_Login_Forget">忘記密碼</string>
+    <string name="tv_LoginForget_Title">忘記密碼</string>
+    <string name="tv_LoginForget_Remind">請洽客服或至櫃台協助辦理</string>
+    <string name="ht_LoginForget_Number">請輸入手機號碼</string>
+    <string name="tv_LoginForget_Confirm">確認</string>
+
+    <!-- 公司端String -->
+    <string name="btBuMenuCoachDataManage">教練資料管理</string>
+    <string name="btBuMenuMemberDataManage">會員資料管理</string>
+    <string name="btBuMenuBusinessDataManage">員工資料管理</string>
+    <string name="btBuMenuClassDataManage">課程資料管理</string>
+    <string name="btBuMenuNotification">公告</string>
+    <string name="btBuMenuPostManage">貼文審查</string>
+    <string name="bu_menu_title">公司端主選單</string>
+    <string name="buOptionMenuElse">請再點選一次</string>
+    <string name="tietBuAddNotiSender">發文者</string>
+    <string name="tietBuAddNotiTitle">標題</string>
+    <string name="tietBuAddNotiText">內文</string>
+    <string name="btBuAddNotiSaveNoti">儲存</string>
+    <string name="BuAddNotiErrEmpty">不可空白</string>
+    <string name="btBuAddNotiCancel">取消</string>
+    <string name="spBuAddChooseBranch">點擊選擇分店</string>
+    <string name="spBuAddChooseTarget">點擊選擇對象</string>
+    <string name="tvBuAddChooseDateTime">點擊選擇日期&amp;時間</string>
+    <string name="bu_add_choose_branch_confirm">確認</string>
+    <string name="tietBuAddNotiPic">點擊選擇照片</string>
+    <string name="btBuDataModify">修改</string>
+    <string name="tietBuAddModiID">新增/修改人編號</string>
+
+    <string name="tietBuAddMemDataName">會員名字</string>
+    <string name="tietBuAddMemDataID">會員編號</string>
+    <string name="tietBuAddMemDataPwd">會員密碼</string>
+    <string name="tietBuAddMemDataGen">性別</string>
+    <string name="tietBuAddMemDataCell">連絡電話</string>
+    <string name="tietBuAddMemDataTwid">身分證字號</string>
+    <string name="tietBuAddMemDataAddr">通訊地址</string>
+    <string name="tietBuAddMemDataEmail">Email</string>
+    <string name="tietBuAddMemDataExpireDate">會員期限</string>
+    <string name="btBuAddMemDataSuspend">停權</string>
+    <string name="btBuAddMemDataActive">解除停權</string>
+    <string name="btBuAddClassDataUnavailable">不開放報名</string>
+    <string name="btBuAddClassDataAvailable">開放報名</string>
+
+    <string name="tv_Me_Training_Monday">一</string>
+    <string name="tv_Me_Training_Tuesday">二</string>
+    <string name="etMeTrainingDay1">一</string>
+    <string name="etMeTrainingDay2">二</string>
+    <string name="etMeTrainingDay3">三</string>
+    <string name="etMeTrainingDay4">四</string>
+    <string name="etMeTrainingDay5">五</string>
+    <string name="etMeTrainingDay6">六</string>
+    <string name="etMeTrainingDay7">日</string>
+    <string name="etSportList">運動清單</string>
+    <string name="etSportList2">運動清單</string>
+
+
+    <string name="tietBuAddCoaDataName">教練名字</string>
+    <string name="tietBuAddCoaDataID">教練編號</string>
+    <string name="tietBuAddCoaDataPwd">教練密碼</string>
+    <string name="tietBuAddCoaDataGen">性別</string>
+    <string name="tietBuAddCoaDataCell">連絡電話</string>
+    <string name="tietBuAddCoaDataTwid">身分證字號</string>
+    <string name="tietBuAddCoaDataAddr">通訊地址</string>
+    <string name="tietBuAddCoaDataEmail">Email</string>
+    <string name="tietBuAddCoaDataOBDate">入職日期</string>
+    <string name="tietBuAddCoaDataIntro">教練介紹</string>
+
+    <string name="tietBuAddBuzDataName">員工名字</string>
+    <string name="tietBuAddBuzDataID">員工編號</string>
+    <string name="tietBuAddBuzDataBranch">所屬分店</string>
+    <string name="tietBuAddBuzDataPwd">員工密碼</string>
+    <string name="tietBuAddBuzDataGen">性別</string>
+    <string name="tietBuAddBuzDataCell">連絡電話</string>
+    <string name="tietBuAddBuzDataTwid">身分證字號</string>
+    <string name="tietBuAddBuzDataAddr">通訊地址</string>
+    <string name="tietBuAddBuzDataEmail">Email</string>
+    <string name="tietBuAddBuzDataOBDate">入職日期</string>
+
+    <string name="tietBuAddClassDataName">課程名稱</string>
+    <string name="tietBuAddClassDataSportCat">運動種類</string>
+    <string name="tietBuAddClassDataStartTime">課程開始時間</string>
+    <string name="tietBuAddClassDataEndTime">課程結束時間</string>
+    <string name="tvBuAddClassDataBranch">上課分店</string>
+    <string name="tietBuAddClassDataPlace">上課教室</string>
+    <string name="tietBuAddClassDataPoint">點數</string>
+    <string name="tietBuAddClassDataLimit">人數上限</string>
+    <string name="tietBuAddClassDataRegiStartTime">報名開始時間</string>
+    <string name="tietBuAddClassDataRegiEndTime">報名截止時間</string>
+    <string name="tietBuAddClassDataIntro">課程介紹</string>
+
+
+    <!--會員端字串    -->
+    <string name="me_br_store">分店商城</string>
+    <string name="btPaymentConfirm">確認送出</string>
+
+    <string name="MeCoachDetail">教練介紹</string>
+    <string name="me_shoping_lessonkind">課程類型: </string>
+    <string name="me_shopping_coachname">指導教練: </string>
+    <string name="me_shopping_lesson_date">上課日期: </string>
+    <string name="me_shopping_lesson_time">上課時間: </string>
+    <string name="me_shopping_lesson_point">點數價格: </string>
+    <string name="meFragmentBranch">分店</string>
+    <string name="meShoppingFragmentStore">課程商城</string>
+    <string name="meShoppingDetailFragmentItem">課程詳細資訊</string>
+    <string name="meCoachInfoDetailFragment">教練介紹細節</string>
+    <string name="meCoachInfoFragment">教練介紹</string>
+    <string name="meMapDirectFragment">導覽</string>
+    <string name="meShopCart">購物車</string>
+    <string name="meSearchViewLessonName">全課程名稱、教練名稱</string>
+    <string name="btnTextConfirm">確認</string>
+    <string name="meExerciseKindO2">有氧</string>
+    <string name="meExerciseKindAttack">突刺</string>
+    <string name="me_shoping_lessonName">課程名稱: </string>
+    <string name="meDialogDetailSearch">關鍵字查詢</string>
+    <string name="meDialogDetailKindSearch">類別查詢</string>
+    <string name="mePutIntoShoppingCart">放入購物車</string>
+    <string name="meShoppingDirectBuy">直接購買</string>
+    <string name="meShoppingDetailNotify">注意事項</string>
+    <string name="meShoppingDetailNotifyDetail">1.不要久佔器材、滑手機\n2.使用完器材記得擦拭消毒過\n3.要穿適合運動的服裝\n4.槓片卡扣一定要用\n5.不懂請多問現場教練，以免受傷\n6.請不要來自拍占用器材\n7.不要忘了離開時自己的個人配備\n8.訓練前先有充足的睡眠</string>
+    <string name="meShoppingCartConfirmBuy">確認購買</string>
+    <string name="meShoppingCartAllSelect">全選</string>
+    <string name="meShoppingCartCheckOut">結帳</string>
+    <string name="meShoppingCartSpendPoint">所需點數</string>
+    <string name="meShoppingCartMePoint">擁有點數</string>
+    <string name="meCheckoutTitle">結帳成功</string>
+    <string name="meShoppingCheckoutNotify">教練可能會利用私訓提醒您該課程的注意事項，請不要漏掉私訓與APP 的通知！</string>
+    <string name="btMeShoppingCheckoutGoToBuyRecord">前往\n購買紀錄</string>
+    <string name="meShoppingCheckoutBackToShopStore">返回\n課程主頁</string>
+    <string name="meShoppoingCartCheckouting">結帳中</string>
+    <string name="meShoppoingCheckoutNoMony">餘額不足</string>
+    <string name="btMeMapDirect">開始導航</string>
+
+    <!--系統字串    -->
+    <string name="networkConnectionError">無法連線</string>
+
+
+    <string name="textConfirmPay">確認付款</string>
+    <string name="textCannotUseGPay">Cannot use Google Pay</string>
+    <string name="textCanceled">Canceled by the user.</string>
+    <string name="textNoNetwork">no network connection available</string>
+    <string name="textPaymentSuccess">Payment is successful</string>
+
+
+    <!-- 填上TapPay Portal上註冊的資料 -->
+    <!-- 開發人員內容 / 應用程式 -->
+    <string name="TapPay_AppID">132654</string>
+    <string name="TapPay_AppKey">app_WlvRgeMZOS9yLQaalhSi4WsbLz0tL0AY8cmisHAERybob3FyeWD3tEXyRTiJ</string>
+
+    <!-- 公司資訊 / 帳號金鑰 -->
+    <string name="TapPay_PartnerKey">partner_Qbwz7VW1gvvg35RAGtiA6Zbt59J9MUfXgGQZIUzidJMsCy45ND6qHqh2</string>
+
+    <!-- 商家管理 / 商家設置 / 收單銀行 -->
+    <string name="TapPay_MerchantName">TW_TAISHIN</string>
+    <!-- 商家管理 / 商家設置 / Merchant ID -->
+    <string name="TapPay_MerchantID">nnmm123456789_TAISHIN</string>
+</resources>

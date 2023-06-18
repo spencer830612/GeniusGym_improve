@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.geniusgym.setting.SettingViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/SettingCoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/tvHead"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout01"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout01"
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvHead">
+
+                    <LinearLayout
+                        android:id="@+id/llSettings"
+                        android:layout_width="278dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/divider1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/tvNotifiedEnable"
+                            style="@style/SettingStyleText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tvSettingNotifiedEnable" />
+
+                        <View
+                            android:id="@+id/divider2"
+                            android:layout_width="300sp"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/tvClassNoEnable"
+                            style="@style/SettingStyleText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="true"
+                            android:text="@string/tvSettingClassNoEnable"
+                            android:visibility="gone" />
+
+                        <View
+                            android:id="@+id/divider3"
+                            android:layout_width="300sp"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/tvNewClassEnable"
+                            style="@style/SettingStyleText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tvSettingNewClassEnable" />
+
+                        <View
+                            android:id="@+id/divider4"
+                            android:layout_width="300sp"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/tvClassScheNoti"
+                            style="@style/SettingStyleText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tvSettingClassScheNoti"
+                            android:visibility="gone" />
+
+                        <View
+                            android:id="@+id/divider5"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/tvWorkScheNoti"
+                            style="@style/SettingStyleText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tvSettingWorkScheNoti"
+                            android:visibility="gone" />
+
+                        <View
+                            android:id="@+id/divider6"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/tvPrivacyShowEnable"
+                            style="@style/SettingStyleText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tvSettingPrivacyShowEnable"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSettingSwitchs"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/divider1_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/sNotifiedEnable"
+                            style="@style/SettingStyleSwitch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@={viewModel.sNotifiedEnable}"/>
+
+                        <View
+                            android:id="@+id/divider1_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/sClassNoEnable"
+                            style="@style/SettingStyleSwitch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@={viewModel.sClassNoEnable}"
+                            android:visibility="gone" />
+
+                        <View
+                            android:id="@+id/divider1_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/sNewClassEnable"
+                            style="@style/SettingStyleSwitch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked = "@={viewModel.sNewClassEnable}"/>
+
+                        <View
+                            android:id="@+id/divider1_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/sClassScheNoti"
+                            style="@style/SettingStyleSwitch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@={viewModel.sClassScheNoti}"
+                            android:visibility="gone" />
+
+                        <View
+                            android:id="@+id/divider1_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/sWorkScheNoti"
+                            style="@style/SettingStyleSwitch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@={viewModel.sWorkScheNoti}"
+                            android:visibility="gone" />
+
+                        <View
+                            android:id="@+id/divider1_6"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/sPrivacyShowEnable"
+                            style="@style/SettingStyleSwitch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@={viewModel.sPrivacyShowEnable}"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvSocial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/tvSettingSocial"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout01"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout01" />
+
+                <ImageView
+                    android:id="@+id/ivSocial"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="12dp"
+
+                    app:layout_constraintStart_toStartOf="@+id/tvSocial"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSocial"
+                    app:srcCompat="@android:mipmap/sym_def_app_icon"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/tvSocialNickName"
+                    style="@style/SettingStyleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/tvSettingNickName"
+                    app:layout_constraintStart_toStartOf="@+id/ivSocial"
+                    app:layout_constraintTop_toBottomOf="@+id/ivSocial" />
+
+                <EditText
+                    android:id="@+id/etSocialNickName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#808080"
+                    android:ems="10"
+                    android:text = "@{viewModel.nickName}"
+                    android:enabled="false"
+                    android:inputType="textPersonName"
+                    android:nextFocusDown="@+id/etSocialNickName"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#808080"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSocialNickName"
+                    app:layout_constraintStart_toEndOf="@+id/tvSocialNickName"
+                    app:layout_constraintTop_toTopOf="@+id/tvSocialNickName"
+                    app:layout_constraintVertical_bias="0.571" />
+
+                <TextView
+                    android:id="@+id/tvSocialIntro"
+                    style="@style/SettingStyleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/tvSettingSocialIntro"
+                    app:layout_constraintBottom_toBottomOf="@+id/etSocialIntro"
+                    app:layout_constraintEnd_toStartOf="@+id/etSocialIntro"
+                    app:layout_constraintTop_toTopOf="@+id/etSocialIntro" />
+
+                <EditText
+                    android:id="@+id/etSocialIntro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text = "@{viewModel.intro}"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#808080"
+                    app:layout_constraintStart_toStartOf="@+id/etSocialNickName"
+                    app:layout_constraintTop_toBottomOf="@+id/etSocialNickName" />
+
+                <ImageView
+                    android:id="@+id/ivSocialIntro"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/etSocialIntro"
+                    app:layout_constraintStart_toEndOf="@+id/etSocialIntro"
+                    app:layout_constraintTop_toTopOf="@+id/etSocialIntro"
+                    app:srcCompat="@drawable/ic_setting_edit" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout02"
+                    android:layout_width="335dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout01"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout01"
+                    app:layout_constraintTop_toBottomOf="@+id/etSocialIntro">
+
+                    <LinearLayout
+                        android:id="@+id/llSocialSettings"
+                        android:layout_width="278dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/tvSocialFollowEnabled"
+                            style="@style/SettingStyleText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tvSettingSocialFollowEnabled" />
+
+                        <View
+                            android:id="@+id/divider7"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/tvSocialAllowInfoAccess"
+                            style="@style/SettingStyleText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tvSettingSocialAllowInfoAccess" />
+
+                        <View
+                            android:id="@+id/divider8"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/tvSocialAllowFansCountsAccess"
+                            style="@style/SettingStyleText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tvSettingSocialAllowFansCountsAccess" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSocialSwitchs"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/divider1_"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/sSocialFollowEnabled"
+                            style="@style/SettingStyleSwitch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@={viewModel.sSocialFollowEnabled}"/>
+
+                        <View
+                            android:id="@+id/divider1_7"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/sSocialAllowInfoAccess"
+                            style="@style/SettingStyleSwitch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked = "@={viewModel.sSocialAllowInfoAccess}"/>
+                        <View
+                            android:id="@+id/divider1_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/sSocialAllowFansCountsAccess"
+                            style="@style/SettingStyleSwitch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked = "@={viewModel.sSocialAllowFansCountsAccess}"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_bu"
+    app:startDestination="@id/buMenuFragment">
+
+    <fragment
+        android:id="@+id/buMenuFragment"
+        android:name="com.example.geniusgym.business.BuMenuFragment"
+        android:label="fragment_bu_menu"
+        tools:layout="@layout/fragment_bu_menu" >
+        <action
+            android:id="@+id/action_buMenu_to_buMemberData"
+            app:destination="@id/buMemberDataFragment" />
+        <action
+            android:id="@+id/action_buMenu_to_buCoachData"
+            app:destination="@id/buCoachDataFragment" />
+        <action
+            android:id="@+id/action_buMenu_to_buNotificaitonManage"
+            app:destination="@id/buNotificaitonManageFragment" />
+        <action
+            android:id="@+id/action_buMenu_to_buBusinessData"
+            app:destination="@id/buBusinessDataFragment" />
+        <action
+            android:id="@+id/action_buMenu_to_buClassData"
+            app:destination="@id/buClassDataFragment" />
+        <action
+            android:id="@+id/action_buMenu_to_buPostManage"
+            app:destination="@id/buPostManageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buMemberDataFragment"
+        android:name="com.example.geniusgym.business.BuMemberDataFragment"
+        android:label="fragment_bu_member_data"
+        tools:layout="@layout/fragment_bu_member_data" >
+        <action
+            android:id="@+id/action_buMemberData_to_buMemberDataAdd"
+            app:destination="@id/buMemberDataAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buCoachDataFragment"
+        android:name="com.example.geniusgym.business.BuCoachDataFragment"
+        android:label="fragment_bu_coach_data"
+        tools:layout="@layout/fragment_bu_coach_data" >
+        <action
+            android:id="@+id/action_buCoachData_to_buCoachDataAdd"
+            app:destination="@id/buCoachDataAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buNotificaitonManageFragment"
+        android:name="com.example.geniusgym.business.BuNotificationDataFragment"
+        android:label="fragment_bu_notificaiton_manage"
+        tools:layout="@layout/fragment_bu_notificaiton_data" >
+        <action
+            android:id="@+id/action_buNotificaitonManage_to_buAddNotification"
+            app:destination="@id/buAddNotificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buBusinessDataFragment"
+        android:name="com.example.geniusgym.business.BuBusinessDataFragment"
+        android:label="fragment_bu_business_data"
+        tools:layout="@layout/fragment_bu_business_data" >
+        <action
+            android:id="@+id/action_buBusinessData_to_buBusinessDataAdd"
+            app:destination="@id/buBusinessDataAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buClassDataFragment"
+        android:name="com.example.geniusgym.business.BuClassDataFragment"
+        android:label="fragment_bu_class_data"
+        tools:layout="@layout/fragment_bu_class_data" >
+        <action
+            android:id="@+id/action_buClassData_to_buClassDataAdd"
+            app:destination="@id/buClassDataAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buPostManageFragment"
+        android:name="com.example.geniusgym.business.BuPostManageFragment"
+        android:label="fragment_bu_post_manage"
+        tools:layout="@layout/fragment_bu_post_manage" />
+    <fragment
+        android:id="@+id/buAddNotificationFragment"
+        android:name="com.example.geniusgym.business.BuNotificationDataAddFragment"
+        android:label="fragment_bu_add_notification"
+        tools:layout="@layout/fragment_bu_notification_add" />
+    <fragment
+        android:id="@+id/buMemberDataAddFragment"
+        android:name="com.example.geniusgym.business.BuMemberDataAddFragment"
+        android:label="fragment_bu_member_data_add"
+        tools:layout="@layout/fragment_bu_member_data_add" />
+    <fragment
+        android:id="@+id/buCoachDataAddFragment"
+        android:name="com.example.geniusgym.business.BuCoachDataAddFragment"
+        android:label="fragment_bu_coach_data_add"
+        tools:layout="@layout/fragment_bu_coach_data_add" />
+    <fragment
+        android:id="@+id/buBusinessDataAddFragment"
+        android:name="com.example.geniusgym.business.BuBusinessDataAddFragment"
+        android:label="fragment_bu_business_data_add"
+        tools:layout="@layout/fragment_bu_business_data_add" />
+    <fragment
+        android:id="@+id/buClassDataAddFragment"
+        android:name="com.example.geniusgym.business.BuClassDataAddFragment"
+        android:label="fragment_bu_class_data_add"
+        tools:layout="@layout/fragment_bu_class_data_add" />
+    <fragment
+        android:id="@+id/buMemberDataDetailFragment"
+        android:name="com.example.geniusgym.business.BuMemberDataDetailFragment"
+        android:label="fragment_bu_member_data_detail"
+        tools:layout="@layout/fragment_bu_member_data_detail" />
+    <fragment
+        android:id="@+id/buCoachDataDetailFragment"
+        android:name="com.example.geniusgym.business.BuCoachDataDetailFragment"
+        android:label="fragment_bu_coach_data_detail"
+        tools:layout="@layout/fragment_bu_coach_data_detail" />
+    <fragment
+        android:id="@+id/buBusinessDataDetailFragment"
+        android:name="com.example.geniusgym.business.BuBusinessDataDetailFragment"
+        android:label="fragment_bu_business_data_detail"
+        tools:layout="@layout/fragment_bu_business_data_detail" />
+    <fragment
+        android:id="@+id/buClassDataDetailFragment"
+        android:name="com.example.geniusgym.business.BuClassDataDetailFragment"
+        android:label="fragment_bu_class_data_detail"
+        tools:layout="@layout/fragment_bu_class_data_detail" />
+    <fragment
+        android:id="@+id/buNotificationDetailFragment"
+        android:name="com.example.geniusgym.business.BuNotificationDataDetailFragment"
+        android:label="fragment_bu_notification_detail"
+        tools:layout="@layout/fragment_bu_notification_detail" />
+</navigation>

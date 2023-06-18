@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".coach.CoCoachFragment">
+
+
+    <TextView
+        android:id="@+id/tvCoCoPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CoCoachFragment"
+        android:layout_marginTop="24dp"
+        android:text="@string/tvCoCoPhoneNumber"
+        app:layout_constraintStart_toStartOf="@+id/tvCoCoUsername"
+        app:layout_constraintTop_toBottomOf="@+id/tvCoCoUsername" />
+
+    <TextView
+        android:id="@+id/tvCoCoUsername"
+        style="@style/CoCoachFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="96dp"
+        android:text="@string/tvCoCoUsername"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCoCoMeStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        style="@style/CoCoachFragment"
+        android:text="@string/tvCoCoMeStart"
+        app:layout_constraintStart_toStartOf="@+id/tvCoCoUsername"
+        app:layout_constraintTop_toBottomOf="@+id/tvCoCoMeNumber" />
+
+    <TextView
+        android:id="@+id/tvCoCoMeNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/tvCoCoMeNumber"
+        style="@style/CoCoachFragment"
+        app:layout_constraintStart_toStartOf="@+id/tvCoCoUsername"
+        app:layout_constraintTop_toBottomOf="@+id/tvCoCoPhoneNumber" />
+
+    <TextView
+        android:id="@+id/tvCoCoUsernameShow"
+        style="@style/CoCoachFragment"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="224dp"
+        android:text="姓名"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCoCoUsername"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCoCoMeNumberShow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0456"
+        style="@style/CoCoachFragment"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCoCoMeNumber"
+        app:layout_constraintStart_toStartOf="@+id/tvCoCoPhoneNumberShow" />
+
+    <TextView
+        android:id="@+id/tvCoCoPhoneNumberShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0123"
+        style="@style/CoCoachFragment"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCoCoPhoneNumber"
+        app:layout_constraintStart_toStartOf="@+id/tvCoCoUsernameShow" />
+
+    <TextView
+        android:id="@+id/tvCoCoMeStartShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0789"
+        style="@style/CoCoachFragment"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCoCoMeStart"
+        app:layout_constraintStart_toStartOf="@+id/tvCoCoMeNumberShow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

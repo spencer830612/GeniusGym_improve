@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".member.MeMemberFragment" >
+
+    <data>
+          <variable
+              name="viewmodel"
+              type="com.example.geniusgym.member.viewmodel.MeMemberDetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/Con.mem_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvUsername"
+            style="@style/Mehoinf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="35dp"
+            android:text="姓名"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPhoneNumber"
+            style="@style/Mehoinf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="25dp"
+            android:text="電話號碼"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
+        <EditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="26dp"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="numberDecimal"
+            android:text="@{viewmodel.memdetail.phonenumber}"
+            android:textColor="#F4F3F3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tvPhoneNumber"
+            app:layout_constraintTop_toBottomOf="@+id/etMeName"
+            tools:text="顯示電話號碼" />
+
+        <TextView
+            android:id="@+id/tvMeNumber"
+            style="@style/Mehoinf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="25dp"
+            android:hint="@string/tvMeNumber"
+            android:text="會員編號"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPhoneNumber" />
+        <EditText
+            android:id="@+id/etMeNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="26dp"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="numberDecimal"
+            android:text="@{viewmodel.memdetail.memberID}"
+            android:textColor="#F4F3F3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tvMeNumber"
+            app:layout_constraintTop_toBottomOf="@+id/etPhoneNumber"
+            tools:text="顯示會員編號" />
+        <TextView
+            android:id="@+id/tvAdmi"
+            style="@style/Mehoinf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="25dp"
+            android:hint="@string/tvAdmi"
+            android:text="上次入場時間"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMeNumber" />
+
+
+        <EditText
+            android:id="@+id/etAdmi"
+            style="@style/Mehoinf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="26dp"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="textPersonName"
+            android:text="@{viewmodel.memdetail.entryTime}"
+            android:textColor="#F4F3F3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tvAdmi"
+            app:layout_constraintTop_toBottomOf="@+id/etMeNumber"
+            tools:text="顯示上次入場時間" />
+        <TextView
+            android:id="@+id/tvMeStart"
+            style="@style/Mehoinf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="25dp"
+            android:hint="@string/tvMeStart"
+            android:text="會員起訖日"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAdmi" />
+    <EditText
+        android:id="@+id/etMeStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="26dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:text="@{viewmodel.memdetail.membershipdate}"
+        android:textColor="#F4F3F3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tvCoCoMeStart"
+        app:layout_constraintTop_toBottomOf="@+id/etAdmi"
+        tools:text="顯示會員起始日" />
+
+
+
+
+        <EditText
+            android:id="@+id/etMeName"
+            style="@style/Mehoinf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="26dp"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="textPersonName"
+            android:text="@{viewmodel.memdetail.name}"
+            android:textColor="#F4F3F3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvUsername"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="顯示會員姓名" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

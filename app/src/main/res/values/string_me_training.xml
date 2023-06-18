@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="etMeTrainingAerobic">有氧</string>
+    <string name="etMeTrainingMuscle">肌力</string>
+    <string name="etMeTrainingAll">全部</string>
+    <string name="etMeTrainingAerobic2">有氧</string>
+    <string name="etMeTrainingMuscle2">肌力</string>
+    <string name="etMeTrainingAll2">全部</string>
+    <string name="htRecordWeight">重量(公斤/磅數)</string>
+    <string name="htRecordFrequency">次數</string>
+    <string name="etRecordConfirm">確認送出</string>
+    <string name="etSportlistUpload">上傳</string>
+    <string name="etTrainingAllButton">運動清單</string>
+    <string name="htTrainingAllSearch">請輸入運動名稱</string>
+    <string name="etMeTrainingAerobic3">有氧</string>
+    <string name="etMeTrainingMuscle3">肌力</string>
+    <string name="etMeTrainingAll3">全部</string>
+</resources>

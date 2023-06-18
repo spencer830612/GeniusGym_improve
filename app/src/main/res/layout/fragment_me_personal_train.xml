@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="member.controller.MePersonalTrain" >
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.geniusgym.member.MePersonalTrainViewModel" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:id="@+id/fra.mem.pertrain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/tvPersonalTrainDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@{viewmodel.classname}"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="顯示年月日" />
+
+    <LinearLayout
+        android:id="@+id/lf_Personal_Train_week"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#1C1B1F"
+        android:backgroundTint="#1C1B1F"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPersonalTrainDate">
+
+        <TextView
+            android:id="@+id/tvPerTrainDay1"
+            style="@style/CoCaDayofWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/tvPerTrainDay1"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPerTrainDay2"
+            style="@style/CoCaDayofWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tvPerTrainDay2"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPerTrainDay3"
+            style="@style/CoCaDayofWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tvPerTrainDay3"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPerTrainDay4"
+            style="@style/CoCaDayofWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tvPerTrainDay4"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPerTrainDay5"
+            style="@style/CoCaDayofWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tvPerTrainDay5"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPerTrainDay6"
+            style="@style/CoCaDayofWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tvPerTrainDay6"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvPerTrainDay7"
+            style="@style/CoCaDayofWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tvPerTrainDay7"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPersonalTrain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lf_Personal_Train_week" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

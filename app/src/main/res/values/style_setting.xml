@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SettingStyleText" parent="Theme.Material3.Dark">
+        <item name="android:layout_marginBottom">14sp</item>
+        <item name="android:layout_marginTop">14sp</item>
+        <item name="android:textSize">18sp</item>
+    </style><!--TextAppearance.AppCompat-->
+    <style name="SettingStyleSwitch" parent="Theme.Material3.Dark">
+        <item name="android:layout_marginBottom">3.235sp</item>
+        <item name="android:layout_marginTop">3.25sp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+</resources>

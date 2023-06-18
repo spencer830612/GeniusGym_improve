@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".business.BuCoachDataDetailFragment">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.geniusgym.business.viewModel.BuCoachViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="660dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_conversion_absoluteHeight="577dp"
+            tools:layout_conversion_absoluteWidth="405dp"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="73dp">
+
+            <ImageView
+                android:id="@+id/ivBuAddCoaDataDetailPic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/baseline_add_a_photo_24"
+                app:imgBase64="@{viewModel.coach.c_picBase64}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddCoaDataDetailName"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivBuAddCoaDataDetailPic" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddCoaDataDetailName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:enabled="false"
+                    android:hint="@string/tietBuAddCoaDataName"
+                    android:text="@={viewModel.coach.c_name}"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddCoaDataDetailID"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddCoaDataDetailName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddCoaDataDetailID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tietBuAddCoaDataID"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:text="@{viewModel.coach.c_id}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddCoaDataDetailPwd"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddCoaDataDetailID">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddCoaDataDetailPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tietBuAddCoaDataPwd"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:text="@={viewModel.coach.c_pwd}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddCoaDataDetailGen"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddCoaDataDetailPwd">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddCoaDataDetailGen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tietBuAddCoaDataGen"
+                    android:enabled="false"
+                    android:textColor="@color/black"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddCoaDataDetailCell"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddCoaDataDetailGen">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddCoaDataDetailCell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tietBuAddCoaDataCell"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:text="@={viewModel.coach.c_cell}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddCoaDataDetailTwid"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddCoaDataDetailCell">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddCoaDataDetailTwid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tietBuAddCoaDataTwid"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:text="@={viewModel.coach.c_twid}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddCoaDataDetailAddr"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddCoaDataDetailTwid">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddCoaDataDetailAddr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tietBuAddCoaDataAddr"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:text="@={viewModel.coach.c_addr}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddCoaDataDetailEmail"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddCoaDataDetailAddr">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddCoaDataDetailEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tietBuAddCoaDataEmail"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:text="@={viewModel.coach.c_email}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddCoaDataDetailOBDate"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddCoaDataDetailEmail">
+
+                <TextView
+                    android:id="@+id/tvBuAddCoaDataDetailOBDate"
+                    android:layout_width="380dp"
+                    android:layout_height="60dp"
+                    android:background="@color/white"
+                    android:gravity="center|left"
+                    android:hint="@string/tietBuAddCoaDataOBDate"
+                    android:imeOptions="flagNoExtractUi"
+                    android:paddingLeft="16dp"
+                    android:textColorHint="#CDC7D2"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    app:text="@{viewModel.coach.c_start_date}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddCoaDataDetailChooseBranch"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilBuAddCoaDataDetailOBDate">
+
+                <TextView
+                    android:id="@+id/tvBuAddCoaDataDetailChooseBranch"
+                    android:layout_width="377dp"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:gravity="center|left"
+                    android:hint="@string/spBuAddChooseBranch"
+                    android:imeOptions="flagNoExtractUi"
+                    android:paddingLeft="16dp"
+                    android:textColorHint="#CDC7D2"
+                    android:textColor="@color/black"
+                    android:text="@={viewModel.coach.bh_name}"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddCoaDataDetailIntro"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="221dp"
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilBuAddCoaDataDetailChooseBranch">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddCoaDataDetailIntro"
+                    android:layout_width="match_parent"
+                    android:layout_height="176dp"
+                    android:background="@color/white"
+                    android:enabled="false"
+                    android:hint="@string/tietBuAddCoaDataIntro"
+                    android:text="@={viewModel.coach.c_intro}"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btBuAddCoaDataDetailModify"
+                android:layout_width="130dp"
+                android:layout_height="84dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/perfect_yellow"
+                android:text="@string/btBuDataModify"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilBuAddCoaDataDetailIntro"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/btBuAddCoaDataDetailSave"
+                android:layout_width="130dp"
+                android:layout_height="84dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/btBuAddNotiSaveNoti"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilBuAddCoaDataDetailIntro"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/btBuAddCoaDataDetailSuspend"
+                android:layout_width="130dp"
+                android:layout_height="84dp"
+                android:layout_marginStart="50dp"
+                android:backgroundTint="#BC635D"
+                android:text="@string/btBuAddMemDataSuspend"
+                android:textColor="#000000"
+                android:textColorLink="#FFD200"
+                android:textSize="24sp"
+                android:onClick="@{viewModel::Suspend}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btBuAddCoaDataDetailModify"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilBuAddCoaDataDetailIntro" />
+
+            <Button
+                android:id="@+id/btBuAddCoaDataDetailActive"
+                android:layout_width="130dp"
+                android:layout_height="84dp"
+                android:layout_marginStart="50dp"
+                android:backgroundTint="#BC635D"
+                android:text="@string/btBuAddMemDataActive"
+                android:textColor="#000000"
+                android:textColorLink="#FFD200"
+                android:textSize="20sp"
+                android:visibility="gone"
+                android:onClick="@{viewModel::Suspend}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btBuAddCoaDataDetailModify"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilBuAddCoaDataDetailIntro" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

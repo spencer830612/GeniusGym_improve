@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.geniusgym.coach.calendarMemberListDetail.viewmodel.CoCalenderMemberStaticViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvCoCaMeStHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="16dp"
+            android:textSize="23sp"
+            android:text="@{viewModel.member.name}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="田聖潔" />
+
+        <TextView
+            android:id="@+id/tvCoCaMeStBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{viewModel.memberStatistic}"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/tvCoCaMeStHead"
+            app:layout_constraintTop_toBottomOf="@+id/tvCoCaMeStHead"
+            tools:text="生理性別：戰鬥直升機\n年齡：19\n身高：169 cm\n體重：169 kg\n體脂：40 %" />
+
+        <TextView
+            android:id="@+id/tvCoCaMeStExerciseDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/tvCoCaMeStExerciseDialog"
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCoCaMeStBody" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="357dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCoCaMeStExerciseDialog" />
+
+        <TextView
+            android:id="@+id/tvCoCaMeStecerciseRecordDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{viewModel.textDate}"
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <LinearLayout
+            android:id="@+id/llCoCaMeStatisticDate"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#1C1B1F"
+            android:backgroundTint="#1C1B1F"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCoCaMeStecerciseRecordDate">
+
+            <TextView
+                android:id="@+id/tvCoCaMeStExerciseDayOf1"
+                style="@style/CoCaDayofWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tvCoCaDayOf1" />
+
+            <TextView
+                android:id="@+id/tvCoCaMeStExerciseDayOf2"
+                style="@style/CoCaDayofWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:text="@string/tvCoCaDayOf2" />
+
+            <TextView
+                android:id="@+id/tvCoCaMeStExerciseDayOf3"
+                style="@style/CoCaDayofWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:text="@string/tvCoCaDayOf3" />
+
+            <TextView
+                android:id="@+id/tvCoCaMeStExerciseDayOf4"
+                style="@style/CoCaDayofWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:text="@string/tvCoCaDayOf4" />
+
+            <TextView
+                android:id="@+id/tvCoCaMeStExerciseDayOf5"
+                style="@style/CoCaDayofWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:text="@string/tvCoCaDayOf5" />
+
+            <TextView
+                android:id="@+id/tvCoCaMeStExerciseDayOf6"
+                style="@style/CoCaDayofWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:text="@string/tvCoCaDayOf6" />
+
+            <TextView
+                android:id="@+id/tvCoCaMeStExerciseDayOf7"
+                style="@style/CoCaDayofWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:text="@string/tvCoCaDayOf7" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCoCaMeSportStatistic"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llCoCaMeStatisticDate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

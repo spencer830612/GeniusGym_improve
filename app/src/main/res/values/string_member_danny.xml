@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tvUsername">姓名</string>
+    <string name="etUsername">顯示姓名</string>
+    <string name="tvPhoneNumber">電話號碼</string>
+    <string name="etPhoneNumber">顯示電話號碼</string>
+    <string name="tvMeNumber">會員編號</string>
+    <string name="etMeNumber">顯示會員編號</string>
+    <string name="tvAdmi">上次入場時間</string>
+    <string name="etAdmi">顯示上次入場時間</string>
+    <string name="tvMeStart">會員起訖日</string>
+    <string name="etMeStart">顯示會員起訖日</string>
+    <string name="etMeName">顯示會員姓名</string>
+    <string name="tvMePoints">點數餘額</string>
+    <string name="btTopup">儲值</string>
+    <string name="etShowPoints">顯示點數餘額</string>
+    <string name="tvMePointsTr">點數交易紀錄</string>
+    <string name="etPointTime">顯示儲值年月日</string>
+    <string name="etPointsChange">顯示儲值點數</string>
+    <string name="btAddPoint">點數台幣</string>
+    <string name="etCardNum">卡號</string>
+    <string name="etCardHolder">持卡人姓名</string>
+    <string name="etVali">有效期(MM/YY)</string>
+    <string name="etSecurityCode">安全碼</string>
+    <string name="btCreditCard">確認送出</string>
+    <string name="tvShopName">特約商店：</string>
+    <string name="tvGymName">GeniusGym點數平台</string>
+    <string name="tvTradePoints">交易金額：</string>
+    <string name="tvTradeDay">交易日期：</string>
+    <string name="tvCardNum">卡號：</string>
+    <string name="tvPasswordCon">密碼認證</string>
+    <string name="etPhoneCode">輸入手機認證碼</string>
+    <string name="rePhoneCode">重新發送認證碼</string>
+    <string name="btTradeCheck">確認</string>
+    <string name="tvCardApplyNum">卡號</string>
+    <string name="tvCardApplyName">持卡人姓名</string>
+    <string name="tvCardApplyVali">有效期(MM/YY)</string>
+    <string name="tvCardApplySafeCode">安全碼</string>
+    <string name="tvCardApplyPhoneNum">手機號碼</string>
+    <string name="btCardApply">確認綁定</string>
+    <string name="tvPerTrainDay1">一</string>
+    <string name="tvPerTrainDay2">二</string>
+    <string name="tvPerTrainDay3">三</string>
+    <string name="tvPerTrainDay4">四</string>
+    <string name="tvPerTrainDay5">五</string>
+    <string name="tvPerTrainDay6">六</string>
+    <string name="tvPerTrainDay7">日</string>
+
+    <!-- navigation drawer -->
+    <string name="NaviMem">個人資料</string>
+    <string name="NaviMemClass">個人課表</string>
+    <string name="NaviMemPoints">個人點數</string>
+    <string name="NaviMemTrain">自主訓練紀錄</string>
+    <string name="NaviMemBodyInfo">身體數據</string>
+    <string name="NaviMemSetting">設定</string>
+    <string name="txtOpen">開</string>
+    <string name="txtClose">關</string>
+
+
+    <!--credit card spinner -->
+    <string-array name="creditcard">
+        <item>國泰世華</item>
+        <item>中國信託</item>
+        <item>台灣郵政</item>
+        <item>台新銀行</item>
+    </string-array>
+
+    <!-- hint是提醒user輸入東西（會顯示）， 板手text 是開發者自己看而已  -->
+
+</resources>

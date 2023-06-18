@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_login"
+    app:startDestination="@id/loginMainFragment">
+
+    <fragment
+        android:id="@+id/loginMainFragment"
+        android:name="com.example.geniusgym.login.LoginMainFragment"
+        android:label="LoginMainFragment"
+        tools:layout="@layout/fragment_login_main">
+        <action
+            android:id="@+id/action_loginMainFragment_to_loginForgetFragment"
+            app:destination="@id/loginForgetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginForgetFragment"
+        android:name="com.example.geniusgym.LoginForgetFragment"
+        android:label="LoginForgetFragment"
+        tools:layout="@layout/fragment_login_forget" />
+</navigation>

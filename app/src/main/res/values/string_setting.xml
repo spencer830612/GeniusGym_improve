@@ -1,0 +1,19 @@
+<resources>
+    <string name="tvHead">提醒設定列表</string>
+    <string name="tvSettingClassNoEnable">課程提醒通知</string>
+    <string name="tvSettingClassScheNoti">課程時間提醒</string>
+    <string name="tvSettingNotifiedEnable">是否開啟提醒通知</string>
+    <string name="tvSettingNewClassEnable">最新課程資訊</string>
+    <string name="tvSettingWorkScheNoti">自主訓練時間提醒</string>
+    <string name="tvSettingPrivacyShowEnable">健康資訊隱私</string>
+    <string name="tvSettingSocial">社群設定</string>
+    <string name="etSettingSocialNickName">請輸入暱稱</string>
+    <string name="etSettingSocialIntro">請輸入簡介</string>
+    <string name="tvSettingNickName">暱稱：</string>
+    <string name="tvSettingSocialIntro">簡介：</string>
+    <string name="tvSettingSocialFollowEnabled">允許追蹤</string>
+    <string name="tvSettingSocialAllowInfoAccess">允許查看個人檔案資訊</string>
+    <string name="tvSettingSocialAllowFansCountsAccess">允許查看粉絲與追蹤者</string>
+    <string name="toastSavePreference">已儲存設定</string>
+    <string name="btSettingEdSend">送出</string>
+</resources>

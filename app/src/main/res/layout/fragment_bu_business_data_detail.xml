@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".business.BuBusinessDataDetailFragment">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.geniusgym.business.viewModel.BuBusinessViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="413dp"
+        android:layout_height="664dp"
+        android:layout_marginTop="20dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddBuzDataDetailName"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddBuzDataDetailName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tietBuAddBuzDataName"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:text="@={viewModel.buz.b_name}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddBuzDataDetailID"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddBuzDataDetailName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddBuzDataDetailID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tietBuAddBuzDataID"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:text="@={viewModel.buz.b_id}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddBuzDataDetailBranch"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddBuzDataDetailID">
+
+                <TextView
+                    android:id="@+id/tvBuAddBuzDataDetailBranch"
+                    android:layout_width="380dp"
+                    android:layout_height="60dp"
+                    android:background="@color/white"
+                    android:gravity="center|left"
+                    android:imeOptions="flagNoExtractUi"
+                    android:paddingLeft="16dp"
+                    android:textColorHint="#CDC7D2"
+                    android:hint="@string/tietBuAddBuzDataBranch"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:text="@={viewModel.buz.bh_name}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddBuzDataDetailPwd"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddBuzDataDetailBranch">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddBuzDataDetailPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tietBuAddBuzDataPwd"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:text="@={viewModel.buz.b_pwd}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddBuzDataDetailGen"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddBuzDataDetailPwd">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddBuzDataDetailGen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tietBuAddBuzDataGen"
+                    android:textColor="@color/black"
+                    android:enabled="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddBuzDataDetailCell"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddBuzDataDetailGen">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddBuzDataDetailCell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tietBuAddBuzDataCell"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:text="@={viewModel.buz.b_cell}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddBuzDataDetailTwid"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddBuzDataDetailCell">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddBuzDataDetailTwid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tietBuAddBuzDataTwid"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:text="@={viewModel.buz.b_twid}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddBuzDataDetailAddr"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddBuzDataDetailTwid">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddBuzDataDetailAddr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tietBuAddBuzDataAddr"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:text="@={viewModel.buz.b_addr}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddBuzDataDetailEmail"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddBuzDataDetailAddr">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietBuAddBuzDataDetailEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tietBuAddBuzDataEmail"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:text="@={viewModel.buz.b_email}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBuAddBuzDataDetailOBDate"
+                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilBuAddBuzDataDetailEmail">
+
+                <TextView
+                    android:id="@+id/tvBuAddBuzDataDetailOBDate"
+                    android:layout_width="380dp"
+                    android:layout_height="60dp"
+                    android:background="@color/white"
+                    android:gravity="center|left"
+                    android:hint="@string/tietBuAddBuzDataOBDate"
+                    android:imeOptions="flagNoExtractUi"
+                    android:paddingLeft="16dp"
+                    android:textColorHint="#CDC7D2"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    app:text="@{viewModel.buz.b_start_date}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btBuAddBuzDataDetailModify"
+                android:layout_width="130dp"
+                android:layout_height="84dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/perfect_yellow"
+                android:text="@string/btBuDataModify"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilBuAddBuzDataDetailOBDate"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/btBuAddBuzDataDetailSave"
+                android:layout_width="130dp"
+                android:layout_height="84dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/btBuAddNotiSaveNoti"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilBuAddBuzDataDetailOBDate"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/btBuAddBuzDataDetailSuspend"
+                android:layout_width="130dp"
+                android:layout_height="84dp"
+                android:layout_marginStart="50dp"
+                android:backgroundTint="#BC635D"
+                android:text="@string/btBuAddMemDataSuspend"
+                android:textColor="#000000"
+                android:textColorLink="#FFD200"
+                android:textSize="24sp"
+                android:onClick="@{viewModel::Suspend}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btBuAddBuzDataDetailModify"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilBuAddBuzDataDetailOBDate" />
+
+            <Button
+                android:id="@+id/btBuAddBuzDataDetailActive"
+                android:layout_width="130dp"
+                android:layout_height="84dp"
+                android:layout_marginStart="50dp"
+                android:backgroundTint="#BC635D"
+                android:text="@string/btBuAddMemDataActive"
+                android:textColor="#000000"
+                android:textColorLink="#FFD200"
+                android:textSize="20sp"
+                android:visibility="gone"
+                android:onClick="@{viewModel::Suspend}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btBuAddBuzDataDetailModify"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilBuAddBuzDataDetailOBDate" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

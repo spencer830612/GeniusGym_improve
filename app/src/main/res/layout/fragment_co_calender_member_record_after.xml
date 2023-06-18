@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.geniusgym.coach.calendarMemberListDetail.viewmodel.CoCalenderMemberRecordAfterViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".coach.calendarMemberListDetail.controller.CoCalenderMemberRecordAfterFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+            android:id="@+id/tvSportSmallItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{viewModel.sportName}"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@+id/tvMemberName"
+            app:layout_constraintTop_toTopOf="@+id/tvMemberName"
+            tools:text="@string/hello_blank_fragment" />
+
+        <TextView
+            android:id="@+id/tvMemberName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            android:text="@{viewModel.name}"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCoCaMeReAfWeightInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietCoCaMeReAfWeightInput"
+                android:layout_width="match_parent"
+                android:text="@={viewModel.weight}"
+                android:layout_height="wrap_content"
+                android:hint="@string/tietCoCaMeReAfWeightInput" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCoCaMeReAfTimes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilCoCaMeReAfWeightInput">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietCoCaMeReAfTimes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={viewModel.freq}"
+
+                android:hint="@string/tietCoCaMeReAfTimes" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/ivCoCaMeReAfAddSmallTerm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="@{_->viewModel.onClick()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_co_ca_me_re_af_add" />
+
+        <Button
+            android:id="@+id/btCoCaMeReAfSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:text="@string/btCoCaMeReAfSend"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCoCaMeReAf"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/btCoCaMeReAfSend"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCoCaMeReAfErrorMessage" />
+
+        <TextView
+            android:id="@+id/tvCoCaMeReAfErrorMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@{viewModel.errorMessage}"
+            android:textColor="#FF0000"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilCoCaMeReAfTimes"
+            tools:text="咩匍" />
+
+        <TextView
+            android:id="@+id/tvCoCaMeReAfDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            android:text="@{viewModel.textDate}"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCoCaMeReAfAddSmallTerm"
+            app:layout_constraintEnd_toStartOf="@+id/ivCoCaMeReAfAddSmallTerm"
+            app:layout_constraintTop_toTopOf="@+id/ivCoCaMeReAfAddSmallTerm"
+            app:layout_constraintVertical_bias="0.529" />
+
+        <TextView
+            android:id="@+id/tvCoCaMeReAfDateHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCoCaMeReAfDateHead"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCoCaMeReAfDate"
+            app:layout_constraintEnd_toStartOf="@+id/tvCoCaMeReAfDate"
+            app:layout_constraintTop_toTopOf="@+id/tvCoCaMeReAfDate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

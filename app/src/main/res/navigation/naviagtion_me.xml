@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/naviagtion_me"
+    android:label="@string/social"
+    app:startDestination="@id/meHomeFragment">
+
+    <fragment
+        android:id="@+id/meHomeFragment"
+        android:name="com.example.geniusgym.member.controller.MeHomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_me_home" />
+    <fragment
+        android:id="@+id/meBranchFragment"
+        android:name="com.example.geniusgym.member.controller.MeBranchFragment"
+        android:label="@string/branch"
+        tools:layout="@layout/fragment_me_branch" />
+    <fragment
+        android:id="@+id/meMemberFragment"
+        android:name="com.example.geniusgym.member.controller.MeMemberFragment"
+        android:label="@string/member"
+        tools:layout="@layout/fragment_me_member" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.geniusgym.notification.NotificationFragment"
+        android:label="@string/notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.geniusgym.setting.SettingFragment"
+        android:label="@string/setting"
+        tools:layout="@layout/fragment_setting" />
+
+    <fragment
+        android:id="@+id/settingEdFragment"
+        android:name="com.example.geniusgym.setting.SettingEdFragment"
+        android:label="@string/setting"
+        tools:layout="@layout/fragment_setting_ed" />
+    <fragment
+
+        android:id="@+id/socailNavFragment"
+        android:name="com.example.geniusgym.social.SocialNavFragment"
+        android:label="@string/social"
+        tools:layout="@layout/fragment_social_nav" />
+
+
+</navigation>

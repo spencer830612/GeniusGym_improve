@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".member.controller.MeBuyPointsFragment" >
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.geniusgym.member.adapter.MeBuyPointsShowViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/etBuyPoint"
+                style="@style/SettingStyleText"
+                android:layout_width="227dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="26sp"
+                android:gravity="center_vertical"
+                android:text='@{viewmodel.pointbuy.bpamount}'/>
+
+            <Button
+                android:id="@+id/btBuyPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="26sp"
+                android:textColor="#050505"
+                style="@style/SettingStyleText"
+                android:gravity="center_vertical"
+                android:text='@{viewmodel.pointbuy.bpmoney}'/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    </layout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".business.BuMenuFragment">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/BuMenuScrollView"
+        android:layout_width="0dp"
+
+
+        android:layout_height="0dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btBuMenuBusinessDataManage"
+                android:layout_width="291dp"
+                android:layout_height="83dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/btBuMenuBusinessDataManage"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btBuMenuMemberDataManage" />
+
+            <Button
+                android:id="@+id/btBuMenuNotificationManage"
+                android:layout_width="291dp"
+                android:layout_height="83dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/btBuMenuNotification"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btBuMenuClassDataManage" />
+
+            <Button
+                android:id="@+id/btBuMenuClassDataManage"
+                android:layout_width="291dp"
+                android:layout_height="83dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/btBuMenuClassDataManage"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btBuMenuBusinessDataManage" />
+
+            <Button
+                android:id="@+id/btBuMenuMemberDataManage"
+                android:layout_width="291dp"
+                android:layout_height="83dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/btBuMenuMemberDataManage"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btBuMenuCoachDataManage" />
+
+            <Button
+                android:id="@+id/btBuMenuCoachDataManage"
+                android:layout_width="291dp"
+                android:layout_height="83dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/btBuMenuCoachDataManage"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btBuMenuPostManage"
+                android:layout_width="291dp"
+                android:layout_height="83dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/btBuMenuPostManage"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btBuMenuNotificationManage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

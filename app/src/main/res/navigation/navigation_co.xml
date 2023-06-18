@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_co"
+    app:startDestination="@id/coHomeFragment">
+    <fragment
+        android:id="@+id/coHomeFragment"
+        android:name="com.example.geniusgym.coach.CoHomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_co_home" />
+
+    <fragment
+        android:id="@+id/coCalendarClassFragment"
+        android:name="com.example.geniusgym.coach.calendarMemberList.CoCalendarClassFragment"
+        android:label="CoCalendarClassFragment"
+        tools:layout="@layout/fragment_co_calendar_class">
+        <action
+            android:id="@+id/action_coCalendarTestFragment_to_coCalendarMemberListFragment2"
+            app:destination="@id/coCalendarMemberListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coCalendarMemberListFragment"
+        android:name="com.example.geniusgym.coach.CoCalendarMemberListFragment"
+        android:label="CoCalendarMemberListFragment"
+        tools:layout="@layout/fragment_co_calendar_member_list">
+        <action
+            android:id="@+id/action_coCalendarMemberListFragment2_to_coCalendarMemberDetailFragment"
+            app:destination="@id/coCalendarMemberDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coCalendarMemberDetailFragment"
+        android:name="com.example.geniusgym.coach.CoCalendarMemberDetailFragment"
+        android:label="fragment_co_calendar_member_detail"
+        tools:layout="@layout/fragment_co_calendar_member_detail" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.geniusgym.notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.geniusgym.setting.SettingFragment"
+        android:label="SettingFragment"
+        tools:layout="@layout/fragment_setting"/>
+    <fragment
+        android:id="@+id/coCoachFragment"
+        android:name="com.example.geniusgym.coach.CoCoachFragment"
+        android:label="fragment_co_coach"
+        tools:layout="@layout/fragment_co_coach" />
+    <fragment
+        android:id="@+id/socialNavFragment"
+        android:name="com.example.geniusgym.social.SocialNavFragment"
+        android:label="fragment_social_home"
+        tools:layout="@layout/fragment_social_nav" />
+    <fragment
+        android:id="@+id/socialMessageFragment"
+        android:name="com.example.geniusgym.social.SocialMessageFragment"
+        android:label="fragment_social_message"
+        tools:layout="@layout/fragment_social_message" />
+    <fragment
+        android:id="@+id/socialPostFragment"
+        android:name="com.example.geniusgym.social.SocialPostFragment"
+        android:label="fragment_social_post"
+        tools:layout="@layout/fragment_social_post" />
+    <fragment
+        android:id="@+id/socialProfileFragment"
+        android:name="com.example.geniusgym.social.SocialProfileFragment"
+        android:label="fragment_social_profile"
+        tools:layout="@layout/fragment_social_profile" />
+    <!--<fragment
+        android:id="@+id/coCalenderMemberStaticFragment"
+        android:name="com.example.geniusgym.coach.calendarMemberListDetail.controller.CoCalenderMemberStaticFragment"
+        android:label="CoCalenderMemberStaticFragment" >
+        <action
+            android:id="@+id/action_coCalenderMemberStaticFragment2_to_coCalenderMemberStaticSmallFragment"
+            app:destination="@id/coCalenderMemberStaticSmallFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coCalenderMemberStaticSmallFragment"
+        android:name="com.example.geniusgym.coach.calendarMemberListDetail.controller.CoCalenderMemberStaticSmallFragment"
+        android:label="fragment_co_calender_member_static_small"
+        tools:layout="@layout/fragment_co_calender_member_static_small" />-->
+</navigation>

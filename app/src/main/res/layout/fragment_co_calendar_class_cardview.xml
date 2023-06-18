@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.geniusgym.coach.calendarMemberList.viewmodel.CoCalendarMemberListViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCoCaClTime"
+                style="@style/SettingStyleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26sp"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text='@{viewModel.item.ci_start_time + " ~ " + viewModel.item.ci_ed_time}' />
+
+            <TextView
+                android:id="@+id/tvCoCaClName"
+                style="@style/SettingStyleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@{viewModel.item.ci_name}" />
+
+            <ImageView
+                android:id="@+id/ivCoCaClIcon"
+                android:layout_width="3sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:foregroundGravity="center_vertical"
+                app:srcCompat="@drawable/ic_chevron_right" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

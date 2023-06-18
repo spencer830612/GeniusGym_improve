@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group >
+        <item
+            android:id="@+id/toolbar_mem_info"
+            android:icon="@drawable/host_drawer_layout"
+            android:title="@string/NaviMem"/>
+        <item
+            android:id="@+id/toolbar_mem_class"
+            android:icon="@drawable/mem_navidrawer_class"
+            android:title="@string/NaviMemClass"/>
+        <item
+            android:id="@+id/toolbar_mem_points"
+            android:icon="@drawable/mem_navidrawer_points"
+            android:title="@string/NaviMemPoints"/>
+        <!--<item
+            android:id="@+id/toolbar_mem_train"
+            android:icon="@drawable/mem_navidrawer_train"
+            android:title="@string/NaviMemTrain"/>-->
+        <!--<item
+            android:id="@+id/toolbar_mem_bodyinfo"
+            android:icon="@drawable/mem_navidrawer_bodyinfo"
+            android:title="@string/NaviMemBodyInfo"/>-->
+    </group>
+
+
+</menu>

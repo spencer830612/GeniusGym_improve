@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.geniusgym.LoginForgetViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginForgetFragment">
+
+        <TextView
+            android:id="@+id/tv_LoginForget_Titile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="@string/tv_LoginForget_Title"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_LoginForget_Remind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/tv_LoginForget_Remind"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_LoginForget_Titile"
+            app:layout_constraintStart_toStartOf="@+id/tv_LoginForget_Titile"
+            app:layout_constraintTop_toBottomOf="@+id/tv_LoginForget_Titile" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLoginForgetNumber"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/tv_LoginForget_Remind"
+            app:layout_constraintStart_toStartOf="@+id/tv_LoginForget_Remind"
+            app:layout_constraintTop_toBottomOf="@+id/tv_LoginForget_Remind">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietLoginForgetNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/editbox_background"
+                android:hint="@string/ht_LoginForget_Number"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/bt_LoginForget_Confirm"
+            android:layout_width="134dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/tv_LoginForget_Confirm"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/tilLoginForgetNumber"
+            app:layout_constraintStart_toStartOf="@+id/tilLoginForgetNumber"
+            app:layout_constraintTop_toBottomOf="@+id/tilLoginForgetNumber" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

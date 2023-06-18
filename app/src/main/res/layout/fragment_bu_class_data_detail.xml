@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".business.BuClassDataDetailFragment">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.geniusgym.business.viewModel.BuClassViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilBuAddClassDataDetailName"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingHorizontal="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietBuAddClassDataDetailName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:hint="@string/tietBuAddClassDataName"
+                        android:textColor="@color/black"
+                        android:enabled="false"
+                        android:text="@={viewModel.classs.ci_name}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilBuAddClassDataDetailSportCat"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilBuAddClassDataDetailName">
+
+                    <TextView
+                        android:id="@+id/tvBuAddClassDataDetailSportCat"
+                        android:layout_width="380dp"
+                        android:layout_height="60dp"
+                        android:gravity="center|left"
+                        android:imeOptions="flagNoExtractUi"
+                        android:paddingLeft="16dp"
+                        android:textColorHint="#CDC7D2"
+                        android:background="@color/white"
+                        android:hint="@string/tietBuAddClassDataSportCat"
+                        android:textColor="@color/black"
+                        android:enabled="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilBuAddClassDataDetailStartTime"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilBuAddClassDataDetailSportCat">
+
+                    <TextView
+                        android:id="@+id/tvBuAddClassDataDetailStartTime"
+                        android:layout_width="380dp"
+                        android:layout_height="60dp"
+                        android:gravity="center|left"
+                        android:imeOptions="flagNoExtractUi"
+                        android:paddingLeft="16dp"
+                        android:textColorHint="#CDC7D2"
+                        android:background="@color/white"
+                        android:hint="@string/tietBuAddClassDataStartTime"
+                        android:textColor="@color/black"
+                        android:enabled="false"
+                        app:text="@{viewModel.classs.ci_start_time}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilBuAddClassDataDetailEndTime"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilBuAddClassDataDetailStartTime">
+
+                    <TextView
+                        android:id="@+id/tvBuAddClassDataDetailEndTime"
+                        android:layout_width="380dp"
+                        android:layout_height="60dp"
+                        android:gravity="center|left"
+                        android:imeOptions="flagNoExtractUi"
+                        android:paddingLeft="16dp"
+                        android:textColorHint="#CDC7D2"
+                        android:background="@color/white"
+                        android:hint="@string/tietBuAddClassDataEndTime"
+                        android:textColor="@color/black"
+                        android:enabled="false"
+                        app:text="@{viewModel.classs.ci_ed_time}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilBuAddClassDataDetailBranch"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilBuAddClassDataDetailEndTime">
+
+                    <TextView
+                        android:id="@+id/tvBuAddClassDataDetailBranch"
+                        android:layout_width="380dp"
+                        android:layout_height="60dp"
+                        android:gravity="center|left"
+                        android:imeOptions="flagNoExtractUi"
+                        android:paddingLeft="16dp"
+                        android:textColorHint="#CDC7D2"
+                        android:background="@color/white"
+                        android:hint="@string/tvBuAddClassDataBranch"
+                        android:textColor="@color/black"
+                        android:enabled="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilBuAddClassDataDetailPlace"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilBuAddClassDataDetailBranch">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietBuAddClassDataDetailPlace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:hint="@string/tietBuAddClassDataPlace"
+                        android:textColor="@color/black"
+                        android:text="@={viewModel.classs.ci_place}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilBuAddClassDataDetailPoint"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilBuAddClassDataDetailPlace">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietBuAddClassDataDetailPoint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:hint="@string/tietBuAddClassDataPoint"
+                        android:textColor="@color/black"
+                        android:text="@={viewModel.classs.ci_cost}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilBuAddClassDataDetailLimit"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilBuAddClassDataDetailPoint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietBuAddClassDataDetailLimit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:hint="@string/tietBuAddClassDataLimit"
+                        android:textColor="@color/black"
+                        android:text="@={viewModel.classs.ci_limit}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilBuAddClassDataDetailRegiStartTime"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilBuAddClassDataDetailLimit">
+
+                    <TextView
+                        android:id="@+id/tvBuAddClassDataDetailRegiStartTime"
+                        android:layout_width="380dp"
+                        android:layout_height="60dp"
+                        android:gravity="center|left"
+                        android:imeOptions="flagNoExtractUi"
+                        android:paddingLeft="16dp"
+                        android:textColorHint="#CDC7D2"
+                        android:background="@color/white"
+                        android:hint="@string/tietBuAddClassDataRegiStartTime"
+                        android:textColor="@color/black"
+                        app:text="@{viewModel.classs.ci_regi_time}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilBuAddClassDataDetailRegiEndTime"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilBuAddClassDataDetailRegiStartTime">
+
+                    <TextView
+                        android:id="@+id/tvBuAddClassDataDetailRegiEndTime"
+                        android:layout_width="380dp"
+                        android:layout_height="60dp"
+                        android:gravity="center|left"
+                        android:imeOptions="flagNoExtractUi"
+                        android:paddingLeft="16dp"
+                        android:textColorHint="#CDC7D2"
+                        android:background="@color/white"
+                        android:hint="@string/tietBuAddClassDataRegiEndTime"
+                        android:textColor="@color/black"
+                        app:text="@{viewModel.classs.ci_regi_ed_time}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilBuAddClassDataDetailIntro"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="221dp"
+                    android:paddingHorizontal="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tilBuAddClassDataDetailRegiEndTime">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietBuAddClassDataDetailIntro"
+                        android:layout_width="match_parent"
+                        android:layout_height="176dp"
+                        android:background="@color/white"
+                        android:hint="@string/tietBuAddClassDataIntro"
+                        android:textColor="@color/black"
+                        android:text="@={viewModel.classs.ci_text}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btBuAddClassDataDetailModify"
+                    android:layout_width="130dp"
+                    android:layout_height="84dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/perfect_yellow"
+                    android:text="@string/btBuDataModify"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tilBuAddClassDataDetailIntro"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <Button
+                    android:id="@+id/btBuAddClassDataDetailSave"
+                    android:layout_width="130dp"
+                    android:layout_height="84dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/btBuAddNotiSaveNoti"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tilBuAddClassDataDetailIntro" />
+
+                <Button
+                    android:id="@+id/btBuAddClassDataDetailUnavailable"
+                    android:layout_width="130dp"
+                    android:layout_height="84dp"
+                    android:layout_marginStart="50dp"
+                    android:backgroundTint="#BC635D"
+                    android:text="@string/btBuAddClassDataUnavailable"
+                    android:textColor="#000000"
+                    android:textColorLink="#FFD200"
+                    android:textSize="16sp"
+                    android:onClick="@{viewModel::Available}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btBuAddClassDataDetailModify"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tilBuAddClassDataDetailIntro" />
+
+                <Button
+                    android:id="@+id/btBuAddClassDataDetailAvailable"
+                    android:layout_width="130dp"
+                    android:layout_height="84dp"
+                    android:layout_marginStart="50dp"
+                    android:backgroundTint="#BC635D"
+                    android:text="@string/btBuAddClassDataAvailable"
+                    android:textColor="#000000"
+                    android:textColorLink="#FFD200"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:onClick="@{viewModel::Available}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btBuAddClassDataDetailModify"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tilBuAddClassDataDetailIntro" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

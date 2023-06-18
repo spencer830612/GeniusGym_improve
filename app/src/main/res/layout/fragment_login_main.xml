@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/tv_Login_Remind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_Login_Remind"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <Button
+        android:id="@+id/bt_Login_Confirm"
+        android:layout_width="134dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/bt_Login_Confirm"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/tilLoginPassword"
+        app:layout_constraintStart_toStartOf="@+id/tilLoginPassword"
+        app:layout_constraintTop_toBottomOf="@+id/tilLoginPassword" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilLoginAccount"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_Login_Remind"
+        app:layout_constraintStart_toStartOf="@+id/tv_Login_Remind"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Login_Remind">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietLoginAccount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/ht_Login_Account"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilLoginPassword"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/tilLoginAccount"
+        app:layout_constraintStart_toStartOf="@+id/tilLoginAccount"
+        app:layout_constraintTop_toBottomOf="@+id/tilLoginAccount">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietLoginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ht_Login_Password"
+            android:inputType="textPassword"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_Login_Forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/tv_Login_Forget"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/bt_Login_Confirm"
+        app:layout_constraintStart_toStartOf="@+id/bt_Login_Confirm"
+        app:layout_constraintTop_toBottomOf="@+id/bt_Login_Confirm" />
+
+    <TextView
+        android:id="@+id/tv_Login_Result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#FA879C"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_Login_Forget"
+        app:layout_constraintStart_toStartOf="@+id/tv_Login_Forget"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Login_Forget"
+        tools:text="tvResult" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:srcCompat="@drawable/a001" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

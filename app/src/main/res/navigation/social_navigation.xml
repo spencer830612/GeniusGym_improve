@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/social_navigation"
+    app:startDestination="@id/socialHomeFragment">
+
+    <fragment
+        android:id="@+id/socialHomeFragment"
+        android:name="com.example.geniusgym.social.SocialHomeFragment"
+        android:label="fragment_social_home"
+        tools:layout="@layout/fragment_social_home" >
+        <action
+            android:id="@+id/action_socialHomeFragment_to_socialMessageFragment"
+            app:destination="@id/socialMessageFragment" />
+        <action
+            android:id="@+id/action_socialHomeFragment_to_socialPostFragment"
+            app:destination="@id/socialPostFragment" />
+        <action
+            android:id="@+id/action_socialHomeFragment_to_socialProfileFragment"
+            app:destination="@id/socialProfileFragment" />
+        <action
+            android:id="@+id/action_socialHomeFragment_to_socialPersonalInfoFragment"
+            app:destination="@id/socialPersonalInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/socialMessageFragment"
+        android:name="com.example.geniusgym.social.SocialMessageFragment"
+        android:label="fragment_social_message"
+        tools:layout="@layout/fragment_social_message" >
+        <action
+            android:id="@+id/action_socialMessageFragment_to_socialHomeFragment"
+            app:destination="@id/socialHomeFragment" />
+        <action
+            android:id="@+id/action_socialMessageFragment_to_socialProfileFragment"
+            app:destination="@id/socialProfileFragment" />
+        <action
+            android:id="@+id/action_socialMessageFragment_to_socialChatRoomFragment"
+            app:destination="@id/socialChatRoomFragment" />
+        <action
+            android:id="@+id/action_socialMessageFragment_to_socialPersonalInfoFragment"
+            app:destination="@id/socialPersonalInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/socialPostFragment"
+        android:name="com.example.geniusgym.social.SocialPostFragment"
+        android:label="fragment_social_post"
+        tools:layout="@layout/fragment_social_post" >
+        <action
+            android:id="@+id/action_socialPostFragment_to_socialHomeFragment"
+            app:destination="@id/socialHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/socialProfileFragment"
+        android:name="com.example.geniusgym.social.SocialProfileFragment"
+        android:label="fragment_social_profile"
+        tools:layout="@layout/fragment_social_profile" >
+        <action
+            android:id="@+id/action_socialProfileFragment_to_socialHomeFragment"
+            app:destination="@id/socialHomeFragment" />
+        <action
+            android:id="@+id/action_socialProfileFragment_to_socialMessageFragment"
+            app:destination="@id/socialMessageFragment" />
+        <action
+            android:id="@+id/action_socialProfileFragment_to_socialPersonalInfoFragment"
+            app:destination="@id/socialPersonalInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/socialChatRoomFragment"
+        android:name="com.example.geniusgym.social.SocialChatRoomFragment"
+        android:label="SocialChatRoomFragment" />
+    <fragment
+        android:id="@+id/socialPersonalInfoFragment"
+        android:name="com.example.geniusgym.social.SocialPersonalInfoFragment"
+        android:label="fragment_social_personal_info"
+        tools:layout="@layout/fragment_social_personal_info" />
+</navigation>
