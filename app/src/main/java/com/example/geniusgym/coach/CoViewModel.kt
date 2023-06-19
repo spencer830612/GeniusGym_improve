@@ -12,6 +12,7 @@ import com.example.geniusgym.util.WebRequestSpencer
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 class CoViewModel : ViewModel() {
@@ -37,13 +38,15 @@ class CoViewModel : ViewModel() {
 
     fun loadSportSmallItem() {
         viewModelScope.launch {
-            sportSmallItems?.value = sportSmallItemImport()
+            val deffered1 = async { sportSmallItemImport() }
+            sportSmallItems?.value = deffered1.await()
         }
     }
 
     fun loadSportBigItem() {
         viewModelScope.launch {
-            sportBigItems?.value = sportBigItemImport()
+            val deffered2 = async{sportBigItemImport()}
+            sportBigItems?.value = deffered2.await()
         }
     }
 

@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import com.example.geniusgym.coach.calendarMemberList.viewmodel.CoHomeViewModel
 import com.example.geniusgym.databinding.FragmentCoHomeBinding
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import java.io.BufferedInputStream
@@ -22,7 +23,6 @@ import java.net.MalformedURLException
 import java.net.URL
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
-import kotlin.math.min
 
 class CoHomeFragment : Fragment() {
 
@@ -55,72 +55,90 @@ class CoHomeFragment : Fragment() {
         var url =
             "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" + id + "_" + nowString + "&margin=25"
         runBlocking {
-            mImage = mLoad(url)
-        }
-
-        binding.ivCoHomeQRCode.setImageBitmap(mImage)
-        timer1 = object : CountDownTimer(5 * minute, 1 * second) {
-            // 每過一秒，該方法會被呼叫一次
-            override fun onTick(millisUntilFinished: Long) {
-                val secondsUntilFinished = millisUntilFinished / second
-                fiveMinutes = fiveMinutes.minusSeconds(1)
-                binding.tvCoHomeHead.text = fiveMinutes.format(formatter)
-            }
-
-            // 計時器結束時，該方法會被呼叫
-            override fun onFinish() {
-                fiveMinutes = LocalTime.of(0, 5, 0)
-                now = LocalTime.now()
-                nowString = now.format(nowFormatter)
-                url = "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" + id + "_" + nowString + "&margin=25"
-                runBlocking {
-                    mImage = mLoad(url)
+            println("Top " + LocalTime.now().toString())
+            val as0 = async { mLoad(url) }
+            println("Top2 " + LocalTime.now().toString())
+            mImage = as0.await()
+            println("Top3 " + LocalTime.now().toString())
+            binding.ivCoHomeQRCode.setImageBitmap(mImage)
+            timer1 = object : CountDownTimer(5 * minute, 1 * second) {
+                // 每過一秒，該方法會被呼叫一次
+                override fun onTick(millisUntilFinished: Long) {
+                    millisUntilFinished / second
+                    fiveMinutes = fiveMinutes.minusSeconds(1)
+                    binding.tvCoHomeHead.text = fiveMinutes.format(formatter)
                 }
-                binding.ivCoHomeQRCode.setImageBitmap(mImage)
-                timer1.start()
-            }
-        }
-        timer = object : CountDownTimer(10 * second, 1 * second) {
-            // 每過一秒，該方法會被呼叫一次
-            override fun onTick(millisUntilFinished: Long) {
-                val secondsUntilFinished = millisUntilFinished / second
-                fiveMinutes = fiveMinutes.minusSeconds(1)
-                binding.tvCoHomeHead.text = fiveMinutes.format(formatter)
-            }
 
-            // 計時器結束時，該方法會被呼叫
-            override fun onFinish() {
-                fiveMinutes = LocalTime.of(0, 5, 0)
-                now = LocalTime.now()
-                nowString = now.format(nowFormatter)
-                url = "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" + id + "_" + nowString + "&margin=25"
-                runBlocking {
-                    mImage = mLoad(url)
+                // 計時器結束時，該方法會被呼叫
+                override fun onFinish() {
+                    runBlocking {
+                        fiveMinutes = LocalTime.of(0, 5, 0)
+                        now = LocalTime.now()
+                        nowString = now.format(nowFormatter)
+                        url =
+                            "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" + id + "_" + nowString + "&margin=25"
+
+                        val as1 = async { mLoad(url) }
+                        mImage = as1.await()
+                        binding.ivCoHomeQRCode.setImageBitmap(mImage)
+                        timer1.start()
+                    }
+
                 }
-                binding.ivCoHomeQRCode.setImageBitmap(mImage)
-                timer1.start()
             }
+            timer = object : CountDownTimer(10 * second, 1 * second) {
+                // 每過一秒，該方法會被呼叫一次
+                override fun onTick(millisUntilFinished: Long) {
+                    millisUntilFinished / second
+                    fiveMinutes = fiveMinutes.minusSeconds(1)
+                    binding.tvCoHomeHead.text = fiveMinutes.format(formatter)
+                }
+
+                // 計時器結束時，該方法會被呼叫
+                override fun onFinish() {
+                    fiveMinutes = LocalTime.of(0, 5, 0)
+                    now = LocalTime.now()
+                    nowString = now.format(nowFormatter)
+                    url =
+                        "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" + id + "_" + nowString + "&margin=25"
+                    runBlocking {
+                        val as2 = async { mLoad(url) }
+                        mImage = as2.await()
+                        binding.ivCoHomeQRCode.setImageBitmap(mImage)
+                        timer1.start()
+                    }
+
+                }
+            }
+            timer.start() // 開始計時
         }
-        timer.start() // 開始計時
 
 
     }
 
     private suspend fun mLoad(string: String): Bitmap? {
         val url: URL = mStringToURL(string)!!
-        val connection: HttpURLConnection?
-
+        //var bufferedInputStream: BufferedInputStream? = null
+        lateinit var output: Bitmap
+        lateinit var connect :HttpURLConnection
         try {
-            var bufferedInputStream: BufferedInputStream? = null
             withContext(Dispatchers.IO) {
-                connection = url.openConnection() as HttpURLConnection
-                connection.connect()
+                connect = url.openConnection() as HttpURLConnection
+                val inputStream: InputStream? = connect.inputStream
+                BufferedInputStream(inputStream).use {
+                    output = BitmapFactory.decodeStream(BufferedInputStream(it))
+                }
+
+                /*connection = url.openConnection() as HttpURLConnection
+                connection!!.connect()
                 val inputStream: InputStream? = connection?.inputStream
-                bufferedInputStream = BufferedInputStream(inputStream)
+                bufferedInputStream = BufferedInputStream(inputStream)*/
             }
-            return BitmapFactory.decodeStream(bufferedInputStream)
+            return output
         } catch (e: IOException) {
             e.printStackTrace()
+        } finally {
+            connect?.disconnect()
         }
         return null
     }
